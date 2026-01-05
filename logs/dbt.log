@@ -1,0 +1,168 @@
+[0m15:44:03.450819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d583d9550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d484429a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d6a517790>]}
+
+
+============================== 15:44:03.455429 | 3aeb342d-c974-44d5-9fa0-4eccfcd84ae5 ==============================
+[0m15:44:03.455429 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:44:03.455956 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/bharadwajkasturi/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init netflix', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:44:03.467759 [debug] [MainThread]: Starter project path: /Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m15:44:03.473528 [info ] [MainThread]: 
+Your new dbt project "netflix" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:44:03.474140 [info ] [MainThread]: Setting up your profile.
+[0m15:48:18.755222 [error] [MainThread]: Encountered an error:
+
+[0m15:48:18.792725 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/cli/main.py", line 470, in init
+    results = task.run()
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/task/init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:48:18.965483 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 255.60588, "process_user_time": 1.040647, "process_kernel_time": 0.594603, "process_mem_max_rss": "88731648", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:48:18.968435 [debug] [MainThread]: Command `dbt init` failed at 15:48:18.967641 after 255.61 seconds
+[0m15:48:18.971500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d583d9550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d6a59e4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7d5833cb50>]}
+[0m15:48:18.973339 [debug] [MainThread]: Flushing usage events
+[0m15:48:23.702116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff1d0ba1c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff1d1dea610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff1d1e27820>]}
+
+
+============================== 15:48:23.706964 | c809482b-d3fc-43f1-937f-209f10e5314a ==============================
+[0m15:48:23.706964 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:48:23.707507 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/bharadwajkasturi/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init netflix', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:48:23.719040 [info ] [MainThread]: A project called netflix already exists here.
+[0m15:48:23.722832 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.114623584, "process_user_time": 0.911752, "process_kernel_time": 0.457813, "process_mem_max_rss": "89690112", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:48:23.723623 [debug] [MainThread]: Command `dbt init` succeeded at 15:48:23.723355 after 0.12 seconds
+[0m15:48:23.723992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff1d0ba1c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff1d1e27cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff1c092db20>]}
+[0m15:48:23.724326 [debug] [MainThread]: Flushing usage events
+[0m15:48:49.288934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec691415b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec58c0d250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec58c30730>]}
+
+
+============================== 15:48:49.293673 | 0554dcfa-84e6-4850-bd4c-542e681d6636 ==============================
+[0m15:48:49.293673 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:48:49.294346 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/bharadwajkasturi/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init netflix', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:48:49.304853 [info ] [MainThread]: A project called netflix already exists here.
+[0m15:48:49.309009 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.10710058, "process_user_time": 0.882645, "process_kernel_time": 0.129424, "process_mem_max_rss": "89939968", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:48:49.309985 [debug] [MainThread]: Command `dbt init` succeeded at 15:48:49.309646 after 0.11 seconds
+[0m15:48:49.310431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec691415b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec58c17280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec6a2b3f10>]}
+[0m15:48:49.310794 [debug] [MainThread]: Flushing usage events
+[0m15:49:00.481164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9418d289a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9428bb3310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9428bd7730>]}
+
+
+============================== 15:49:00.485601 | 968feced-f080-4e61-a6bc-cfa680b2c328 ==============================
+[0m15:49:00.485601 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:49:00.486120 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/bharadwajkasturi/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init netflix', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:49:00.496497 [debug] [MainThread]: Starter project path: /Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m15:49:00.503068 [info ] [MainThread]: 
+Your new dbt project "netflix" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:49:00.503647 [info ] [MainThread]: Setting up your profile.
+[0m15:49:24.641297 [error] [MainThread]: Encountered an error:
+
+[0m15:49:24.653441 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/cli/main.py", line 470, in init
+    results = task.run()
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/task/init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:49:24.669503 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 24.26523, "process_user_time": 1.047806, "process_kernel_time": 0.20035, "process_mem_max_rss": "97439744", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:49:24.672345 [debug] [MainThread]: Command `dbt init` failed at 15:49:24.671602 after 24.27 seconds
+[0m15:49:24.673892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9418d289a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9419c1e460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f941a3fe940>]}
+[0m15:49:24.675190 [debug] [MainThread]: Flushing usage events
+[0m15:49:28.138764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc9b8df9c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc9b9ffc610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc9e87c4820>]}
+
+
+============================== 15:49:28.143281 | 0f708ebb-0647-4f59-abe2-4a4f0e97518d ==============================
+[0m15:49:28.143281 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:49:28.143791 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/bharadwajkasturi/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init netflix', 'send_anonymous_usage_stats': 'True'}
+[0m15:49:28.154272 [info ] [MainThread]: A project called netflix already exists here.
+[0m15:49:28.156824 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.10045058, "process_user_time": 0.887907, "process_kernel_time": 0.125706, "process_mem_max_rss": "90161152", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:49:28.157417 [debug] [MainThread]: Command `dbt init` succeeded at 15:49:28.157178 after 0.10 seconds
+[0m15:49:28.157783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc9b8df9c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc9e87c4cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc9b9edab20>]}
+[0m15:49:28.158114 [debug] [MainThread]: Flushing usage events
+[0m15:49:34.424578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9230db1550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9231fd89a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9240e57730>]}
+
+
+============================== 15:49:34.429005 | 8ce79172-a140-40f5-ba82-c967c7d83b11 ==============================
+[0m15:49:34.429005 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:49:34.429525 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/bharadwajkasturi/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init netflix', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:49:34.440910 [debug] [MainThread]: Starter project path: /Users/bharadwajkasturi/Documents/Projects/NETFLIX_DA/NETFLIX_DBT/venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m15:49:34.447620 [info ] [MainThread]: 
+Your new dbt project "netflix" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:49:34.447964 [info ] [MainThread]: Setting up your profile.
+[0m15:50:58.243441 [info ] [MainThread]: Profile netflix written to /Users/bharadwajkasturi/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:50:58.263202 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 83.91336, "process_user_time": 1.046073, "process_kernel_time": 0.210624, "process_mem_max_rss": "100331520", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:50:58.265096 [debug] [MainThread]: Command `dbt init` succeeded at 15:50:58.264320 after 83.92 seconds
+[0m15:50:58.266449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9230db1550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92321a9280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9231da12b0>]}
+[0m15:50:58.267692 [debug] [MainThread]: Flushing usage events

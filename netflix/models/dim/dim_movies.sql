@@ -1,0 +1,12 @@
+WITH SRC_MOVIES AS 
+(
+    SELECT * FROM {{ ref('src_movies')}}
+)
+
+SELECT
+    MOVIE_ID,
+    INITCAP(TRIM(TITLE)) AS MOVIE_TITLE,
+    SPLIT(GENRES,'|') AS GENRE_ARRAY,
+    GENRES
+FROM
+    SRC_MOVIES

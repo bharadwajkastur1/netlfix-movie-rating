@@ -1,0 +1,16 @@
+{{config(materialized = 'table')}}
+
+WITH RAW_TAGS AS 
+(
+    SELECT 
+        *
+    FROM
+        MOVIELENS.RAW.RAW_TAGS
+)
+SELECT 
+    USERID AS USER_ID,
+    MOVIEID AS MOVIE_ID,
+    TAG,
+    TO_TIMESTAMP_LTZ(TIMESTAMP) AS TAG_TIMESTAMP
+FROM   
+    RAW_TAGS
